@@ -296,7 +296,7 @@
 
       // Enviar datos al servidor
       const datos = { botones: datosBotones, tabla: datosTabla };
-      fetch('/guardar_datos', {
+      fetch('https://GuardarRespuestas.azurewebsites.net/api/GuardarRespuestas', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(datos)
@@ -306,4 +306,13 @@
         if (data.success) {
           alert("Datos guardados con éxito");
         } else {
-          alert("Error al guardar los datos
+          alert("Error al guardar los datos");
+        }
+      })
+      .catch(error => {
+        alert("Error al guardar los datos");
+      });
+    }
+  </script>
+</body>
+</html>
