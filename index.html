@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Parrilla Biográfica Interactiva con Tabla</title>
+  <style>
+    .contenedor {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .linea {
+      height: 4px;
+      background-color: black;
+      margin: 30px auto;
+      position: relative;
+      width: 80%;
+    }
+    .boton {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      cursor: pointer;
+      top: -13px;
+      text-align: center;
+      line-height: 30px;
+      border-radius: 50%;
+      background-color: white;
+    }
+    .rojo { color: red; border: 2px solid red; }
+    .azul { color: blue; border: 2px solid blue; }
+    .verde { color: green; border: 2px solid green; }
+    .leyenda {
+      position: relative;
+      width: 80%;
+      margin: 50px auto;
+      height: 2px;
+      background-color: grey;
+      color: black;
+      font-size: 12px;
+      text-align: center;
+    }
+    .marca {
+      display: inline-block;
+      position: absolute;
+      height: 15px;
+      width: 2px;
+      background-color: black;
+      bottom: 20px;
+    }
+    .texto-marca {
+      position: absolute;
+      transform: translateX(-50%);
+      bottom: -20px;
+    }
+    .titulo {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 5px;
+      text-align: left;
+    }
+    input[type="text"] {
+      width: 100%;
+      box-sizing: border-box;
+      border: none;
+      border-bottom: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <div class="titulo">Tipos de contratos y lugar de trabajo durante la trayectoria</div>
+    <div class="linea rojo">
+      <div class="boton rojo" style="left: 0;">a</div>
+      <div class="boton rojo" style="left: 70px;">b</div>
+      <div class="boton rojo" style="left: 140px;">c</div>
+    </div>
+    <div class="leyenda">
+      <div class="marca" style="left: 0%;"><span class="texto-marca" style="left: 50%;">-5</span></div>
+      <div class="marca" style="left: 11.11%;"><span class="texto-marca" style="left: 50%;">0</span></div>
+      <div class="marca" style="left: 22.22%;"><span class="texto-marca" style="left: 50%;">5</span></div>
+      <div class="marca" style="left: 33.33%;"><span class="texto-marca" style="left: 50%;">10</span></div>
+      <div class="marca" style="left: 44.44%;"><span class="texto-marca" style="left: 50%;">15</span></div>
+      <div class="marca" style="left: 55.55%;"><span class="texto-marca" style="left: 50%;">20</span></div>
+      <div class="marca" style="left: 66.66%;"><span class="texto-marca" style="left: 50%;">25</span></div>
+      <div class="marca" style="left: 77.77%;"><span class="texto-marca" style="left: 50%;">30</span></div>
+      <div class="marca" style="left: 88.88%;"><span class="texto-marca" style="left: 50%;">35</span></div>
+      <div class="marca" style="left: 100%;"><span class="texto-marca" style="left: 50%;">40</span></div>
+    </div>
+    <div class="titulo">Evaluaciones y otras acreditaciones</div>
+    <div class="linea azul">
+      <div class="boton azul" style="left: 0;">a</div>
+      <div class="boton azul" style="left: 70px;">b</div>
+      <div class="boton azul" style="left: 140px;">c</div>
+    </div>
+    <div class="leyenda">
+      <div class="marca" style="left: 0%;"><span class="texto-marca" style="left: 50%;">-5</span></div>
+      <div class="marca" style="left: 11.11%;"><span class="texto-marca" style="left: 50%;">0</span></div>
+      <div class="marca" style="left: 22.22%;"><span class="texto-marca" style="left: 50%;">5</span></div>
+      <div class="marca" style="left: 33.33%;"><span class="texto-marca" style="left: 50%;">10</span></div>
+      <div class="marca" style="left: 44.44%;"><span class="texto-marca" style="left: 50%;">15</span></div>
+      <div class="marca" style="left: 55.55%;"><span class="texto-marca" style="left: 50%;">20</span></div>
+      <div class="marca" style="left: 66.66%;"><span class="texto-marca" style="left: 50%;">25</span></div>
+      <div class="marca" style="left: 77.77%;"><span class="texto-marca" style="left: 50%;">30</span></div>
+      <div class="marca" style="left: 88.88%;"><span class="texto-marca" style="left: 50%;">35</span></div>
+      <div class="marca" style="left: 100%;"><span class="texto-marca" style="left: 50%;">40</span></div>
+    </div>
+    <div class="titulo">Experiencias importantes con comités de ética, revisiones de revistas, gestión administrativa, dilemas personales.</div>
+    <div class="linea verde">
+      <div class="boton verde" style="left: 0;">a</div>
+      <div class="boton verde" style="left: 70px;">b</div>
+      <div class="boton verde" style="left: 140px;">c</div>
+    </div>
+    <div class="leyenda">
+      <div class="marca" style="left: 0%;"><span class="texto-marca" style="left: 50%;">-5</span></div>
+      <div class="marca" style="left: 11.11%;"><span class="texto-marca" style="left: 50%;">0</span></div>
+      <div class="marca" style="left: 22.22%;"><span class="texto-marca" style="left: 50%;">5</span></div>
+      <div class="marca" style="left: 33.33%;"><span class="texto-marca" style="left: 50%;">10</span></div>
+      <div class="marca" style="left: 44.44%;"><span class="texto-marca" style="left: 50%;">15</span></div>
+      <div class="marca" style="left: 55.55%;"><span class="texto-marca" style="left: 50%;">20</span></div>
+      <div class="marca" style="left: 66.66%;"><span class="texto-marca" style="left: 50%;">25</span></div>
+      <div class="marca" style="left: 77.77%;"><span class="texto-marca" style="left: 50%;">30</span></div>
+      <div class="marca" style="left: 88.88%;"><span class="texto-marca" style="left: 50%;">35</span></div>
+      <div class="marca" style="left: 100%;"><span class="texto-marca" style="left: 50%;">40</span></div>
+    </div>
+    <div class="titulo">Opciones</div>
+    <div>
+      <button onclick="crearBoton('rojo')">Agregar Contrato</button>
+      <button onclick="eliminarBoton('rojo')">Eliminar Contrato</button>
+      <button onclick="crearBoton('azul')">Agregar Evaluación</button>
+      <button onclick="eliminarBoton('azul')">Eliminar Evaluación</button>
+      <button onclick="crearBoton('verde')">Agregar Experiencia</button>
+      <button onclick="eliminarBoton('verde')">Eliminar Experiencia</button>
+    </div>
+  </div>
+
+  <!-- Tabla debajo de la leyenda -->
+  <table>
+    <tr>
+      <th>Etapa</th>
+      <th>Descripción del contrato</th>
+      <th>Institución, centro o empresa</th>
+      <th>Satisfacción del 1 al 10</th>
+    </tr>
+    <!-- Repetir esta fila para las 6 filas necesarias -->
+    <tr>
+      <td><input type="text" maxlength="30"></td>
+      <td><input type="text" maxlength="30"></td>
+      <td><input type="text" maxlength="30"></td>
+      <td><input type="text" maxlength="30"></td>
+    </tr>
+    <tr>
+      <td><input type="text" maxlength="30"></td>
+      <td><input type="text" maxlength="30"></td>
+      <td><input type="text" maxlength="30"></td>
+      <td><input type="text" maxlength="30"></td>
+    </tr>
+    <tr>
+      <td><input type="text" maxlength="30"></td>
+      <td><input type="text" maxlength="30"></td>
+      <td><input type="text" maxlength="30"></td>
+      <td><input type="text" maxlength="30"></td>
+    </tr>
+    <tr>
+      <td><input type="text" maxlength="30"></td>
+      <td><input type="text" maxlength="30"></td>
+      <td><input type="text" maxlength="30"></td>
+      <td><input type="text" maxlength="30"></td>
+    </tr>
+    <tr>
+      <td><input type="text" maxlength="30"></td>
+      <td><input type="text" maxlength="30"></td>
+      <td><input type="text" maxlength="30"></td>
+      <td><input type="text" maxlength="30"></td>
+    </tr>
+    <tr>
+      <td><input type="text" maxlength="30"></td>
+      <td><input type="text" maxlength="30"></td>
+      <td><input type="text" maxlength="30"></td>
+      <td><input type="text" maxlength="30"></td>
+    </tr>
+  </table>
+
+  <div style="text-align: center; margin-top: 20px;">
+    <button onclick="enviarDatos()">Enviar</button>
+  </div>
+
+  <script>
+    // Función para hacer que los botones sean arrastrables
+    function makeDraggable() {
+      var botones = document.querySelectorAll('.boton');
+      botones.forEach(function(boton) {
+        var isDragging = false;
+        var currentX;
+        var currentBoton;
+
+        boton.onmousedown = function(event) {
+          event.preventDefault();
+          isDragging = true;
+          currentX = event.clientX - boton.getBoundingClientRect().left;
+          currentBoton = boton;
+        };
+
+        window.addEventListener('mousemove', function(event) {
+          if (isDragging) {
+            var shiftX = event.clientX - currentX;
+            var parentRect = currentBoton.parentElement.getBoundingClientRect();
+            var minX = parentRect.left;
+            var maxX = parentRect.right - currentBoton.offsetWidth;
+
+            var newX = shiftX;
+            if (newX < minX) { newX = minX; }
+            if (newX > maxX) { newX = maxX; }
+            currentBoton.style.left = newX - parentRect.left + 'px';
+          }
+        });
+
+        window.addEventListener('mouseup', function() {
+          isDragging = false;
+        });
+
+        boton.ondragstart = function() {
+          return false;
+        };
+      });
+
+      // Agregar clase a las líneas para poder seleccionarlas
+      var lineas = document.querySelectorAll('.linea');
+      lineas.forEach(function(linea) {
+        var color = Array.from(linea.classList).find(function(clase) {
+          return clase === 'rojo' || clase === 'azul' || clase === 'verde';
+        });
+        linea.classList.add(color);
+      });
+    }
+
+    // Función para crear un nuevo botón
+    function crearBoton(color) {
+      var linea = document.querySelector('.linea.' + color);
+      var ultimoBoton = linea.lastElementChild;
+      var nuevoBoton = document.createElement('div');
+      nuevoBoton.className = 'boton ' + color;
+      nuevoBoton.textContent = String.fromCharCode(linea.children.length + 96);
+      nuevoBoton.style.left = (ultimoBoton.offsetLeft + ultimoBoton.offsetWidth + 35) + 'px';
+      linea.appendChild(nuevoBoton);
+      makeDraggable();
+    }
+
+    // Función para eliminar el último botón
+    function eliminarBoton(color) {
+      var linea = document.querySelector('.linea.' + color);
+      if (linea.children.length > 1) {
+        linea.removeChild(linea.lastElementChild);
+      }
+    }
+
+    // Inicializar la función cuando la página cargue
+    window.onload = makeDraggable;
+
+    // Función para capturar y enviar datos
+    function enviarDatos() {
+      // Capturar datos de los botones
+      const botonesRojos = document.querySelectorAll('.linea.rojo .boton');
+      const botonesAzules = document.querySelectorAll('.linea.azul .boton');
+      const botonesVerdes = document.querySelectorAll('.linea.verde .boton');
+      const datosBotones = [];
+
+      botonesRojos.forEach(boton => {
+        datosBotones.push({ color: 'rojo', letra: boton.textContent, posicion: boton.style.left });
+      });
+      botonesAzules.forEach(boton => {
+        datosBotones.push({ color: 'azul', letra: boton.textContent, posicion: boton.style.left });
+      });
+      botonesVerdes.forEach(boton => {
+        datosBotones.push({ color: 'verde', letra: boton.textContent, posicion: boton.style.left });
+      });
+
+      // Capturar datos de la tabla
+      const filas = document.querySelectorAll('table tr');
+      const datosTabla = [];
+      filas.forEach((fila, index) => {
+        if (index !== 0) { // Ignorar la primera fila (encabezados)
+          const celdas = fila.querySelectorAll('td input');
+          const datosFila = Array.from(celdas).map(celda => celda.value);
+          datosTabla.push(datosFila);
+        }
+      });
+
+      // Enviar datos al servidor
+      const datos = { botones: datosBotones, tabla: datosTabla };
+      fetch('/guardar_datos', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(datos)
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          alert("Datos guardados con éxito");
+        } else {
+          alert("Error al guardar los datos
