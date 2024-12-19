@@ -296,7 +296,7 @@
 
       // Enviar datos al servidor
       const datos = { botones: datosBotones, tabla: datosTabla };
-      fetch('https://GuardarRespuestas.azurewebsites.net/api/GuardarRespuestas', {
+      fetch('https://cuestionario-functions.azurewebsites.net/api/GuardarRespuestas', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(datos)
